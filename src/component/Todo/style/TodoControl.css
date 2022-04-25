@@ -1,0 +1,63 @@
+.TodoApp__control {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 65px;
+    background-color: var(--Very-Light-Gray);
+}
+
+.TodoApp__control:first-child {
+    border-top: none !important;
+}
+
+.TodoApp__control:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.TodoApp__control .TodoApp__control-text {
+    padding: 7px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+}
+
+.TodoApp__control .TodoApp__btn-complete {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+.TodoApp__control .TodoApp__btn-complete:hover {
+    border: 1px solid rgb(87, 221, 255, .3) !important;
+}
+
+.TodoApp__control .TodoApp__btn-complete img {
+    position: relative;
+    top: -2px;
+}
+
+.TodoApp__control .TodoApp__btn-remove {
+    margin-right: 7px;
+}
+
+.TodoApp__control .TodoApp__btn-remove img {
+    width: 12px;
+}
+
+.TodoApp__check {
+    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: none;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .TodoApp__control .TodoApp__control-text {
+        font-size: 0.7rem;
+    }
+}

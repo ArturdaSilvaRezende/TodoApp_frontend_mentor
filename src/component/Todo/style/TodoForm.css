@@ -1,0 +1,47 @@
+.TodoApp__form {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -70px;
+}
+
+.TodoApp__form>input {
+    padding: 13px 13px 13px 65px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--Dark-Light-Grayish-Blue);
+    width: 100%;
+}
+
+.TodoApp__form>button {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 25px;
+    border: 1px solid var(--Very-Light-Grayish-Blue);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.TodoApp__form>button:hover {
+    border: 1px solid rgb(87, 221, 255, .3) !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .TodoApp__form {
+        top: -70px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .TodoApp__form {
+        top: -60px;
+    }
+
+    .TodoApp>input {
+        font-size: 0.8rem;
+    }
+}

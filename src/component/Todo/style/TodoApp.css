@@ -1,0 +1,138 @@
+.TodoApp {
+
+    width: 100%;
+    position: relative;
+}
+
+.TodoApp .TodoApp__list {
+    position: relative;
+    top: -75px;
+    width: 37%;
+    margin: 0 auto;
+}
+
+/* ======================= TodoApp__clear ======================= */
+
+.TodoApp .TodoApp__clear {
+    background-color: var(--Very-Light-Gray);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    position: relative;
+    top: -75px;
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    width: 37%;
+    margin: 0 auto;
+}
+
+.TodoApp .TodoApp__clear p {
+    font-size: 0.9rem;
+}
+
+.TodoApp .TodoApp__clear .TodoApp__clear-task {
+    cursor: pointer;
+}
+
+.TodoApp .TodoApp__clear .TodoApp__clear-task:hover {
+    color: var(--Very-Dark-Light-Grayish-Blue);
+}
+
+/* ======================= TodoApp__filter ======================= */
+
+.TodoApp .TodoApp__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--Very-Dark-Light-Grayish-Blue);
+    width: 18%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 95px;
+    transform: translateX(-40%);
+    left: 47%;
+    border-top: none !important;
+
+}
+
+.TodoApp .TodoApp__filter>p {
+    cursor: pointer;
+}
+
+.TodoApp .TodoApp__filter>p:hover {
+    color: var(--Bright-Blue);
+}
+
+.TodoApp .TodoApp__filter>p+p {
+    margin-left: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .TodoApp .TodoApp__list {
+        width: 70%;
+        top: -90px;
+    }
+
+    /* ======================= TodoApp__clear ======================= */
+
+    .TodoApp .TodoApp__clear {
+        width: 70%;
+        margin: 0 auto;
+        top: -90px;
+    }
+
+    /* ======================= TodoApp__filter ======================= */
+
+    .TodoApp .TodoApp__filter {
+        background-color: var(--Very-Light-Gray);
+        padding: 15px;
+        border-radius: 5px;
+        width: 70%;
+        margin: -65px auto 30px auto;
+        position: static;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .TodoApp {
+        height: 100vh;
+    }
+
+    .TodoApp .TodoApp__list {
+        top: -40px;
+    }
+
+    /* ======================= TodoApp__clear ======================= */
+
+    .TodoApp .TodoApp__list, .TodoApp .TodoApp__clear {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .TodoApp .TodoApp__clear {
+        top: -40px;
+        box-shadow: 0px 25px 20px -5px rgb(0, 0, 0, 0.2);
+    }
+
+    /* ======================= TodoApp__filter ======================= */
+
+    .TodoApp .TodoApp__filter {
+        background-color: var(--Very-Light-Gray);
+        padding: 15px;
+        border-radius: 5px;
+        width: 90%;
+        margin: -15px auto 30px auto;
+        position: static;
+        transform: none;
+    }
+
+    .TodoApp .TodoApp__filter>p {
+        margin-top: 6px;
+    }
+
+}
