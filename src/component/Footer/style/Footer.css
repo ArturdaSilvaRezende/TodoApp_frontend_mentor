@@ -5,8 +5,8 @@
     flex-direction: column;
     padding: 0 0 40px 0;
     width: 100%;
-    position: relative;
-    top: -30px;
+    position: absolute;
+    bottom: -150px;
 }
 
 .footer p {
@@ -29,23 +29,30 @@
     margin-top: 5px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1025px) {
+
+@media screen and (min-width: 993px) and (max-width: 1150px) {
     .footer {
-        position: relative;
-        top: 10px;
+        bottom: -250px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .footer {
+        top: 70%;
+        bottom: 0;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
-    footer {
-        position: absolute;
+    .footer {
         top: 60%;
+        bottom: 0;
     }
 }
 
 @media screen and (max-width: 599px) {
-    footer {
-        position: relative;
-        top: -230px;
+    .footer {
+        top: 100%;
+        bottom: 0;
     }
 }

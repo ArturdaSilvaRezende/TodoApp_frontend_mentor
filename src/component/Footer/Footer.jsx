@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //custom style
 import "./style/Footer.css";
 
+//store
+import { StoreContext } from "../../store/store";
+
 const Footer = () => {
+  const { TodoState } = useContext(StoreContext);
+
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{
+        backgroundColor: TodoState ? "#f4f4f6" : "hsl(235, 21%, 11%)",
+      }}
+    >
       <p>Drag and drop to reorder list</p>
       <div className="attribution">
         <p>
