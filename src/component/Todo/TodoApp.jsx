@@ -6,6 +6,7 @@ import TodoForm from "./TodoForm";
 
 //custom style
 import "./style/TodoApp.css";
+import "./style/TodoFooter.css";
 
 //store
 import { StoreContext } from "../../store/store";
@@ -94,6 +95,10 @@ const TodoApp = (props) => {
         backgroundColor: TodoState ? "#f4f4f6" : "hsl(235, 21%, 11%)",
       }}
     >
+      {/* Input */}
+      <TodoForm addTodo={addTodo} />
+
+      {/* TodoList */}
       <div className="TodoApp__list">
         {todos.map((todo, index) => (
           <TodoControl
@@ -104,9 +109,9 @@ const TodoApp = (props) => {
             removeTodo={removeTodo}
           />
         ))}
-        <TodoForm addTodo={addTodo} />
       </div>
 
+      {/* TodoClear */}
       <div
         className="TodoApp__clear"
         style={{
@@ -118,6 +123,26 @@ const TodoApp = (props) => {
         }}
       >
         <p>{todos.length} items left</p>
+        <div
+          className="TodoApp__filter"
+          style={{
+            backgroundColor: TodoState
+              ? "hsl(0, 0%, 98%)"
+              : "hsl(235, 24%, 19%)",
+
+            color: TodoState ? "#bdbcc2" : "#50526b",
+          }}
+        >
+          <p className="font-weigth-700" onClick={() => filterAll(todos)}>
+            All
+          </p>
+          <p className="font-weigth-700" onClick={() => filterActive(todos)}>
+            Active
+          </p>
+          <p className="font-weigth-700" onClick={() => filterComplete(todos)}>
+            Completed
+          </p>
+        </div>
         <p
           className="TodoApp__clear-task"
           onClick={() => removeComplete(todos)}
@@ -126,26 +151,30 @@ const TodoApp = (props) => {
         </p>
       </div>
 
-      <div
-        className="TodoApp__filter"
-        style={{
-          backgroundColor: TodoState ? "hsl(0, 0%, 98%)" : "hsl(235, 24%, 19%)",
-          borderTop: `1px solid ${
-            TodoState ? "hsl(233, 11%, 84%)" : "#37394e"
-          }`,
-          color: TodoState ? "#bdbcc2" : "#50526b",
-        }}
-      >
-        <p className="font-weigth-700" onClick={() => filterAll(todos)}>
-          All
-        </p>
-        <p className="font-weigth-700" onClick={() => filterActive(todos)}>
-          Active
-        </p>
-        <p className="font-weigth-700" onClick={() => filterComplete(todos)}>
-          Completed
-        </p>
-      </div>
+      <footer className="TodoApp__footer">
+        <p>Drag and drop to reorder list</p>
+        <div className="attribution">
+          <p>
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Frontend Mentor
+            </a>
+            .
+          </p>
+          <p>
+            Coded by{" "}
+            <a href="https://artur-silva-rezende.netlify.app/" rel="noreferrer">
+              Artur da Silva Rezende
+            </a>
+            .
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -3,7 +3,6 @@ import React from "react";
 //components
 import Header from "./Header/Header";
 import TodoApp from "./Todo/TodoApp";
-import Footer from "./Footer/Footer";
 
 //store
 import StoreProvider from "../store/store";
@@ -14,7 +13,6 @@ const App = () => {
       <StoreProvider>
         <Header />
         <TodoApp />
-        <Footer />
       </StoreProvider>
     </div>
   );

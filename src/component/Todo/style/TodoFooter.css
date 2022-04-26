@@ -1,0 +1,36 @@
+.TodoApp__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 40px 0;
+    width: 100%;
+    position: relative;
+    top: -70px;
+}
+
+.TodoApp__footer p {
+    color: var(--Dark-Light-Grayish-Blue);
+}
+
+.TodoApp__footer .attribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.TodoApp__footer .attribution p>a {
+    color: var(--Bright-Blue);
+}
+
+.TodoApp__footer .attribution p+p {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .TodoApp__footer {
+        position: static;
+    }
+}

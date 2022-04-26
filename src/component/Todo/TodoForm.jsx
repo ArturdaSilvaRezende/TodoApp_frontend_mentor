@@ -22,6 +22,14 @@ const TodoForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit} className="TodoApp__form">
+      <button
+        type="submit"
+        style={{
+          border: `1px solid ${TodoState ? "hsl(233, 11%, 84%)" : "#37394e"}`,
+        }}
+      >
+        {" "}
+      </button>
       <input
         type="text"
         className="input"
@@ -31,14 +39,6 @@ const TodoForm = (props) => {
           backgroundColor: TodoState ? "hsl(0, 0%, 98%)" : "hsl(235, 24%, 19%)",
         }}
       />
-      <button
-        type="submit"
-        style={{
-          border: `1px solid ${TodoState ? "hsl(233, 11%, 84%)" : "#37394e"}`,
-        }}
-      >
-        {" "}
-      </button>
     </form>
   );
 };

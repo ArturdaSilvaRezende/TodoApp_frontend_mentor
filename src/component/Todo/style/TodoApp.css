@@ -1,15 +1,14 @@
 .TodoApp {
-    width: 100%;
     position: relative;
-    height: 100vh;
 }
 
 .TodoApp .TodoApp__list {
     position: relative;
-    top: -75px;
+    top: -120px;
     width: 37%;
     margin: 0 auto;
 }
+
 
 /* ======================= TodoApp__clear ======================= */
 
@@ -20,11 +19,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 16px;
-    position: relative;
-    top: -75px;
     border-top: 1px solid var(--Light-Grayish-Blue);
     width: 37%;
     margin: 0 auto;
+    position: relative;
+    top: -120px;
 }
 
 .TodoApp .TodoApp__clear p {
@@ -49,13 +48,6 @@
     font-size: 0.9rem;
     color: var(--Very-Dark-Light-Grayish-Blue);
     width: 18%;
-    margin: 0 auto;
-    position: absolute;
-    top: 270px;
-    transform: translateX(-40%);
-    left: 47%;
-    border-top: none !important;
-
 }
 
 .TodoApp .TodoApp__filter>p {
@@ -72,39 +64,22 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .TodoApp .TodoApp__list {
-        width: 70%;
-        top: -90px;
+        top: -120px;
+        width: 68%;
     }
 
     /* ======================= TodoApp__clear ======================= */
 
     .TodoApp .TodoApp__clear {
-        width: 70%;
-        margin: 0 auto;
-        top: -90px;
+        width: 68%;
+        top: -120px;
     }
 
-    /* ======================= TodoApp__filter ======================= */
-
-    .TodoApp .TodoApp__filter {
-        background-color: var(--Very-Light-Gray);
-        padding: 15px;
-        border-radius: 5px;
-        width: 70%;
-        margin: -65px auto 30px auto;
-        position: static;
-        transform: none;
-    }
 }
 
 @media screen and (max-width: 767px) {
-
-    .TodoApp {
-        height: 100vh;
-    }
-
     .TodoApp .TodoApp__list {
-        top: -40px;
+        top: -70px;
     }
 
     /* ======================= TodoApp__clear ======================= */
@@ -115,7 +90,7 @@
     }
 
     .TodoApp .TodoApp__clear {
-        top: -40px;
+        top: -70px;
         box-shadow: 0px 25px 20px -5px rgb(0, 0, 0, 0.2);
     }
 
@@ -126,9 +101,7 @@
         padding: 15px;
         border-radius: 5px;
         width: 90%;
-        margin: -15px auto 30px auto;
-        position: static;
-        transform: none;
+        position: absolute;
     }
 
     .TodoApp .TodoApp__filter>p {
